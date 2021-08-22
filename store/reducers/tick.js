@@ -46,13 +46,14 @@ const tick = (dispatch, getState) => {
 
   const { rowData, updateConfig, tickDuration } = getState()
 
-  const tickWorkDuration = Date.now() - startTime
-
   doUpdate(dispatch, rowData, updateConfig)
+
+  const tickWorkDuration = Date.now() - startTime
 
   const timeout =
     tickWorkDuration > tickDuration ? 0 : tickDuration - tickWorkDuration
 
+  dispatch({ type: 'SET_TICKWORKDURATION', payload: tickWorkDuration })
   setTimeout(() => dispatch(tick), timeout)
 }
 

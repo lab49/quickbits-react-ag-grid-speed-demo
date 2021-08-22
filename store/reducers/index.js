@@ -26,6 +26,9 @@ export const rootReducer = (state = initialRootState, action) => {
     case 'SET_TICKING': {
       return { ...state, ticking: action.payload }
     }
+    case 'SET_TICKWORKDURATION': {
+      return { ...state, tickWorkDuration: action.payload }
+    }
     case 'SET_UPDATECONFIG': {
       return { ...state, updateConfig: action.payload }
     }
