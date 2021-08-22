@@ -45,7 +45,7 @@ const Grid = () => {
           gridApiRef.current = params.api
         }}
       >
-        <AgGridColumn field="sym" headerName="Symbol" />
+        <AgGridColumn field="sym" headerName="Symbol" checkboxSelection />
         <AgGridColumn
           field="close"
           type="numericColumn"
