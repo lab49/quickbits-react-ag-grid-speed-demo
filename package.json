@@ -10,6 +10,7 @@
     "pretty": "prettier -w **/*.js"
   },
   "dependencies": {
+    "@lab49/react-value-flash": "^0.1.4",
     "ag-grid-community": "^26.0.0",
     "ag-grid-react": "^26.0.0",
     "next": "11.1.0",

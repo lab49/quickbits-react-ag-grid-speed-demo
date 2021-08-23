@@ -121,6 +121,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
+"@lab49/react-value-flash@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@lab49/react-value-flash/-/react-value-flash-0.1.4.tgz#c5012ba685e46b7e50da18934f1ff3df5bd4d9bb"
+  integrity sha512-VUdDOfeynpo0hF13akwxBNDt9U6q7+16+cprTx8dnbMRqjeBsbYmjB0k1vgY5lxUU8+batrIjG1/er5hDOmQ1w==
+
 "@napi-rs/triples@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@napi-rs/triples/-/triples-1.0.3.tgz#76d6d0c3f4d16013c61e45dfca5ff1e6c31ae53c"

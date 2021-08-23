@@ -1,6 +1,6 @@
 const initialRootState = {
   rowData: null,
-  tickDuration: 20,
+  tickDuration: 25,
   tickWorkDuration: 0,
   ticking: false,
   updateConfig: { running: true, percentChanging: 15 },
