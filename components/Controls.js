@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux'
 
-const Controls = ({ onRenderClick }) => {
+const Controls = () => {
   const dispatch = useDispatch()
 
   const rowData = useSelector(store => store.rowData)
-  const updateConfig = useSelector(store => store.updateConfig)
+  const percentChanging = useSelector(
+    store => store.updateConfig.percentChanging
+  )
   const tickDuration = useSelector(store => store.tickDuration)
   const tickWorkDuration = useSelector(store => store.tickWorkDuration)
-
-  const { percentChanging } = updateConfig
 
   const onPercentChangingChange = ev => {
     dispatch({ type: 'SET_PERCENTCHANGING', payload: ev.target.value })

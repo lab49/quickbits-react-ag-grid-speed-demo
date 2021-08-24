@@ -1,37 +1,42 @@
 import { randBool, randRange, roll } from '../../lib/rand'
 
-const updateRow = (rowData, offset) => {
-  const row = rowData[offset]
+const updateRow = row => {
+  const { last, vol } = row
 
-  const delta =
-    Math.floor(randRange(1, Math.ceil(0.006 * row.last * 100))) / 100
+  const delta = Math.floor(randRange(1, Math.ceil(0.006 * last * 100))) / 100
 
-  const nextLast = randBool() ? row.last + delta : row.last - delta
-  const nextVol = row.vol + 1000
-
-  rowData[offset] = { ...row, last: nextLast, vol: nextVol }
+  return {
+    ...row,
+    last: randBool() ? last + delta : last - delta,
+    vol: vol + 1000,
+  }
 }
 
-const doUpdate = (dispatch, rowData, updateConfig) => {
-  const { running, percentChanging } = updateConfig
+const maybeUpdateRow = percentChanging => row =>
+  roll(100) < percentChanging ? updateRow(row) : row
 
-  if (!running || !rowData) return
+const doUpdate = (dispatch, rowData, percentChanging) => {
+  if (!rowData) return
 
-  for (let i = 0; i < rowData.length; i++) {
-    if (roll(100) < percentChanging) {
-      updateRow(rowData, i)
-    }
-  }
-
-  dispatch({ type: 'SET_ROWDATA', payload: [...rowData] })
+  dispatch({
+    type: 'SET_ROWDATA',
+    payload: rowData.map(maybeUpdateRow(percentChanging)),
+  })
 }
 
 const tick = (dispatch, getState) => {
   const startTime = Date.now()
 
-  const { rowData, updateConfig, tickDuration } = getState()
+  const {
+    rowData,
+    updateConfig: { percentChanging },
+    tickDuration,
+    ticking,
+  } = getState()
 
-  doUpdate(dispatch, rowData, updateConfig)
+  if (!ticking) return
+
+  doUpdate(dispatch, rowData, percentChanging)
 
   const tickWorkDuration = Date.now() - startTime
 

@@ -3,14 +3,11 @@ const initialRootState = {
   tickDuration: 25,
   tickWorkDuration: 0,
   ticking: false,
-  updateConfig: { running: true, percentChanging: 15 },
+  updateConfig: { percentChanging: 15 },
 }
 
 export const rootReducer = (state = initialRootState, action) => {
   switch (action.type) {
-    case 'REFRESH': {
-      return { ...state, rowData: [...state.rowData] }
-    }
     case 'SET_PERCENTCHANGING': {
       return {
         ...state,
@@ -28,9 +25,6 @@ export const rootReducer = (state = initialRootState, action) => {
     }
     case 'SET_TICKWORKDURATION': {
       return { ...state, tickWorkDuration: action.payload }
-    }
-    case 'SET_UPDATECONFIG': {
-      return { ...state, updateConfig: action.payload }
     }
     default: {
       return state
