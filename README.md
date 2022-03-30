@@ -7,9 +7,11 @@
 
 ## Lab49 `quickbits`: React & Redux + AG Grid client side update speed demo
 
-This project is a `quickbits` showcase of a React & Redux + AG Grid application, specifically configured to show off efficient grid rendering techniques.
+This project is a `quickbits` showcase of a [React](https://reactjs.org/) & [Redux](https://redux.js.org/) + [AG Grid](https://www.ag-grid.com/) application, specifically configured to show off efficient grid rendering techniques.
 
 As with all `quickbits` projects, this is only intended to show off a single concept, for reference in your own projects.
+
+What this project is attempting to do is show how fast rendering can be acheived with AG Grid by leveraging a simple Redux store in a React UI. Additionally, we use [Next.js](https://nextjs.org/) to make getting started as easy as possible.
 
 ![screenshot](https://user-images.githubusercontent.com/88339423/138518369-30434cf9-6508-43fe-ae54-c7b7d56d675d.png)
 
