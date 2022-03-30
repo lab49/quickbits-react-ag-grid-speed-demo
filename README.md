@@ -1,10 +1,11 @@
-<img src=".github/resources/quickbits.png" size="400" alt="Lab49 quickbits" />
+<br />
+<br />
+
+<img src=".github/resources/quickbits.png" width="500" alt="Lab49 quickbits" />
 
 <br />
 
 ## Lab49 `quickbits`: React & Redux + AG Grid client side update speed demo
-
-<br />
 
 This project is a `quickbits` showcase of a React & Redux + AG Grid application, specifically configured to show off efficient grid rendering techniques.
 
@@ -16,7 +17,7 @@ As with all `quickbits` projects, this is only intended to show off a single con
 
 ## Developers guide
 
-You'll need to clone this repo, and from there isn't like any other JavaScript project:
+Clone this repository, `npm install`, `npm run dev`, and you're ready to get going:
 
 ```bash
 git clone git@github.com:lab49/react-ag-grid-client-side-update-essay.git
