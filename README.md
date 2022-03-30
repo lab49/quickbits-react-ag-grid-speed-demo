@@ -15,7 +15,7 @@ What this project is attempting to do is show how fast rendering can be acheived
 
 ![screenshot](https://user-images.githubusercontent.com/88339423/138518369-30434cf9-6508-43fe-ae54-c7b7d56d675d.png)
 
-### [View the live demo!](https://react-ag-grid-client-side-update-essay.vercel.app/)
+### [View the live demo!](https://quickbits-react-ag-grid-speed-demo.vercel.app/)
 
 ## Developers guide
 
